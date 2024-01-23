@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function Dasboard() {
-    return (
-        <div>Dasboard</div>
-    )
+function Dasboard() {
+  return (
+    <div>Dasboard</div>
+  )
 }
+
+export default Dasboard
