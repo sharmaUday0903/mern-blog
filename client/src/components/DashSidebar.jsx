@@ -1,4 +1,3 @@
-
 import { Sidebar } from 'flowbite-react';
 import { HiUser, HiArrowSmRight } from 'react-icons/hi';
 import { useEffect, useState } from 'react';
@@ -24,6 +23,7 @@ export default function DashSidebar() {
               icon={HiUser}
               label={'User'}
               labelColor='dark'
+              as='div'
             >
               Profile
             </Sidebar.Item>
