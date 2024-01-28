@@ -47,7 +47,12 @@ export default function FooterCom() {
                 >
                   Github
                 </Footer.Link>
-                <Footer.Link href='#'>Discord</Footer.Link>
+                <Footer.Link href='https://mail.google.com/mail/?view=cm&fs=1&to=theuday965@gmail.com'
+                 target='_blank'
+                 rel='noopener noreferrer'
+                >
+                  Mail
+                </Footer.Link>
               </Footer.LinkGroup>
             </div>
             <div>
