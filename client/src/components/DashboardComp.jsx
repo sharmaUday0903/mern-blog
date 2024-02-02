@@ -8,6 +8,7 @@ import {
 } from 'react-icons/hi';
 import { Button, Table } from 'flowbite-react';
 import { Link } from 'react-router-dom';
+import ScrollToTop from './ScrollToTop';
 
 export default function DashboardComp() {
   const [users, setUsers] = useState([]);
@@ -20,6 +21,11 @@ export default function DashboardComp() {
   const [lastMonthPosts, setLastMonthPosts] = useState(0);
   const [lastMonthComments, setLastMonthComments] = useState(0);
   const { currentUser } = useSelector((state) => state.user);
+
+  const handleSeeAllClick = () => {
+    // Scroll to the top of the page
+    window.scrollTo({ top: 0});
+  };
   useEffect(() => {
     const fetchUsers = async () => {
       try {
@@ -67,6 +73,8 @@ export default function DashboardComp() {
     }
   }, [currentUser]);
   return (
+    <>
+      <ScrollToTop/>
     <div className='p-3 md:mx-auto'>
       <div className='flex-wrap flex gap-4 justify-center'>
         <div className='flex flex-col p-3 dark:bg-slate-800 gap-4 md:w-72 w-full rounded-md shadow-md'>
@@ -178,7 +186,7 @@ export default function DashboardComp() {
         <div className='flex flex-col w-full md:w-auto shadow-md p-2 rounded-md dark:bg-gray-800'>
           <div className='flex justify-between  p-3 text-sm font-semibold'>
             <h1 className='text-center p-2'>Recent posts</h1>
-            <Button outline gradientDuoTone='purpleToPink'>
+            <Button outline gradientDuoTone='purpleToPink' onClick={handleSeeAllClick}>
               <Link to={'/dashboard?tab=posts'}>See all</Link>
             </Button>
           </div>
@@ -208,5 +216,6 @@ export default function DashboardComp() {
         </div>
       </div>
     </div>
+    </>
   );
 }
