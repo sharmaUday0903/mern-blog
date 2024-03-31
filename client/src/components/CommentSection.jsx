@@ -20,7 +20,7 @@ export default function CommentSection({ postId }) {
       return;
     }
     try {
-      const res = await fetch("${API_URL}/api/comment/create", {
+      const res = await fetch(`${API_URL}/api/comment/create`, {
         credentials: "include",
         method: "POST",
         headers: {
