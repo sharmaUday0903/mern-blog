@@ -31,6 +31,7 @@ app.use(
     credentials: true,
     origin: [
       "https://mern-blog-lyart.vercel.app",
+      "https://mern-blog-rose.vercel.app",
       "http://localhost:3000",
       "http://localhost:5173",
     ],
