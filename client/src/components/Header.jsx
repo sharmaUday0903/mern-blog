@@ -29,7 +29,6 @@ export default function Header() {
     try {
       const res = await fetch(`${API_URL}/api/user/signout`, {
         method: "POST",
-        credentials: "include",
       });
       const data = await res.json();
       if (!res.ok) {
